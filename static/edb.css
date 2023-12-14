@@ -1,0 +1,639 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.line {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+}
+
+
+.container {
+    display: flex;
+}
+
+.left-div {
+    width: 80%;
+    background-color: #fefbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-div {
+    width: 20%;
+    background-color: #fbf7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-div button{
+   border: none;
+   background-color: #fbf7f7 ;
+}
+
+.center-black-div {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 35px 0px 0px 0px;
+    width: 22vw;
+    min-width: 170px;
+    height: 11vh;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    height: 90px;
+    margin: 0px 3px;
+    width: 99.5%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.nav a {
+    padding: 0px .5%;
+    margin: 0px 3%;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.bigheading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+}
+.image-container{
+    padding-top: 20px; 
+}
+.image-container img {
+    width: 100%;
+    height: 36vw;
+    display: block;
+}
+
+@media (max-width:830px) {
+    .nav {
+        display: none;
+    }
+}
+
+.div1 {
+    text-align: center;
+     width: 100%;
+    height: 60px; 
+    background-color: black;
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 25px;
+    display: block;
+}
+
+.headings {
+    display: flex;
+    background-color: black;
+    height: 250px;
+    color: #fff;
+
+}
+
+.headings h3 {
+    padding-top: 10px;
+    font: 1em sans-serif;
+    text-align: center;
+}
+
+.div2 {
+    border-right: 1px solid white;
+    margin: auto;
+    text-align: center;
+}
+
+.div3 {
+    border-right: 1px solid white;
+    margin: auto;
+    text-align: center;
+}
+
+.div4 {
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width:830px) {
+    .bigheading {
+        font-size: 3vw;
+    }
+
+    .div1 {
+        font-size: 3vw;
+    }
+
+    .div2 {
+        width: 100%;
+        border: none;
+        padding-bottom: 40px;
+        padding-top: 15px;
+    }
+
+    .div3 {
+        width: 100%;
+        border: none;
+        background-color: black;
+        padding-bottom: 40px;
+    }
+
+    .div4 {
+        width: 100%;
+        border: none;
+        background-color: black;
+        padding-bottom: 40px;
+    }
+
+    .headings {
+        flex-direction: column;
+        font-size: 1.5rem;
+        height: auto;
+    }
+
+}
+
+.lastdiv {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    border-bottom: 1px solid black;
+    height: auto;
+}
+
+.form1 {
+    margin: auto;
+    text-align: center;
+}
+
+.form1 h1 {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#email {
+    background-color: #fff;
+    outline: #fff;
+    border-bottom: 2px solid black;
+    font: 1em sans-serif;
+
+}
+
+#button {
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.glasspic img {
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+@media (max-width:1000px) {
+    .lastdiv {
+        display: inline;
+    }
+
+    .glasspic img {
+        width: 100%;
+    }
+
+    #button {
+        margin-top: 10px;
+    }
+
+}
+
+.footer {
+    display: flex;
+    height: 300px;
+}
+
+.footer1 {
+    
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.footer2 {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.footer1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+.footer2 h4 {
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+/* about.html css start from here swagat h coder aapka */
+.upperpart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16vh;
+    font-size: 1.3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font: weight -10px;
+    background-color: rgb(205, 179, 49);
+}
+
+.beechpart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-inside {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.text h2 {
+    font-size: 24px;
+}
+
+.text p {
+    font-size: 19px;
+    padding-top: 20px;
+    line-height: 1.2;
+}
+
+.photu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.photu img {
+    max-width: 100%;
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .beechpart {
+        flex-direction: column;
+    }
+
+    .text,
+    .photu {
+        flex: 1;
+        padding: 40px;
+    }
+}
+
+.fullneeche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #000;
+    margin-top: -15px;
+}
+
+.neechepart1,
+.neechepart2 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+/* about.html css ends here dhanyawad coder aapka wakt dene ke liye*/
+
+/* service.html css start from here swagat h coder aapka */
+.beechpart_ser,
+.beechpart3_ser {
+    color: #fff;
+    background-color: black;
+    height: auto;
+    display: flex;
+}
+
+.beechpart_ser,
+.beechpart2_ser,
+.beechpart3_ser p {
+    padding-top: 40px;
+
+}
+
+.beechpart2_ser {
+    color: #000;
+    background-color: #fff;
+    height: auto;
+    display: flex;
+
+}
+
+
+.text1-inside {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+@media (max-width: 768px) {
+
+    .beechpart_ser,
+    .beechpart2_ser,
+    .beechpart3_ser {
+        flex-direction: column;
+    }
+
+    .text1-inside {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .text,
+    .photu {
+        flex: 1;
+        padding: 40px;
+    }
+}
+
+/* service.html css ends here dhanyawad coder aapka wakt dene ke liye*/
+.black-div {
+    background-color: #000;
+    color: #fff;
+}
+
+.upperpart2 {
+    height: auto;
+    padding: 70px 0px 0px;
+}
+
+p {
+    padding: 19px 0px 40px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.h {
+    font: sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.main-con {
+    padding: 12px;
+    border-bottom: 4px solid white;
+}
+
+.main-div {
+    display: flex;
+    padding: 10px 0px;
+    flex-wrap: wrap;
+}
+
+.main-div div {
+    width: 30%;
+    padding: 0 10px;
+}
+
+.m-auto {
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .main-div div {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.border {
+    border: .2px solid rgb(175, 174, 174);
+}
+
+.border:hover {
+    border: 3px solid white;
+}
+
+.pickup {
+    padding: 70px 0px 0px 6vw;
+    margin-bottom: -30px;
+}
+
+.pickup span {
+    padding: 10px;
+
+}
+
+.main-con1 {
+    padding: 0px 0px 90px;
+    border-bottom: 2px solid white;
+    width: 89%;
+    margin: auto;
+}
+
+.tagline {
+    padding-left: 18vw;
+    display: flex;
+    align-items: center;
+    height: 24vh;
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(249, 249, 248);
+}
+
+.review-main {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.width40 {
+    width: 80%;
+    margin: auto;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.second2 {
+    position: relative;
+    bottom: 70px;
+}
+
+.fchild1 {
+    padding-top: 50px;
+}
+
+.fchild2 div img {
+    width: 85%;
+}
+
+.schild1,
+.tchild1,
+.fourth1 {
+    padding-top: 20px;
+}
+
+.schild1,
+.schild2,
+.fourth2,
+.fourth1,
+h5 {
+    padding-top: 20px;
+}
+
+.fourth1 {
+    padding-bottom: 70px;
+}
+
+@media(max-width:840px) {
+    .review-main {
+        flex-direction: column;
+    }
+
+    .width50 {
+        width: 100%;
+    }
+
+    .widthye img {
+        width: max-content;
+    }
+
+
+}
+
+#inter-div1 {
+    display: flex;
+    margin: 45px 0;
+    align-content: center;
+    justify-content: space-between;
+    width: 80%;
+    line-height: 1.8;
+    height: 200px;
+}
+
+
+.divu {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.labeel1 {
+    display: block;
+    width: 50%;
+}
+
+.labeel1 input {
+    width: 92%;
+    border: #000;
+    border-bottom: 2px solid white;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    outline: #000;
+    
+}
+
+.labeel1 label {
+    font-size: 20px;
+}
+.date{
+   position: relative;
+   bottom: 3px;
+}
+.emaildiv input {
+    width: 98%;
+    margin-bottom: 20px;
+    border: #000;
+    border-bottom: 2px solid white;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    outline: #000;
+   
+}
+.emaildiv label{
+    font-size: 20px;
+}
+
+.inner h1 {
+    width: 70%;
+}
+
+.inner img{
+    padding-top: 15%;
+    margin-bottom:6vh;
+}
+.emaildiv textarea{
+    border:0;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    outline: #000;
+}
+.button input{
+    width: 100px;
+    height:50px ;
+    font-size: 20px;
+    margin-bottom:14vh;
+}
+.add h2{
+    text-align: center;
+    padding-left: 300px;
+}

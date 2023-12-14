@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edb.css' %}">*
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="line"></div>
+
+    
+    <div class="container">
+        <div class="left-div">
+            <div class="center-black-div">
+                <h1 data-aos="flip-up">Bonjour!</h1>
+                <h3 data-aos="flip-up">Food Company</h3>
+            </div>
+        </div>
+        <div class="right-div">
+            {% if user.is_authenticated %}
+            <a href="/logout"><button>Log Out</button></a>
+            {% else %}
+            <a href="/login"><button>Log In</button></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div style="display: block;">
+        <div class="nav">
+            <a data-aos="flip-right" href="/">Home</a>
+            <a data-aos="flip-right" href="/aboutpage">About</a>
+            <a data-aos="flip-right" href="/servicepage">Services</a>
+            <a data-aos="flip-right" href="/samplepage">Sample Menu</a>
+            <a data-aos="flip-right" href="/orderonline">Order Online</a>
+            <a data-aos="flip-right" href="/reviewpage">Client Reviews</a>
+            <a data-aos="flip-right" href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="upperpart">
+        <h1>Services</h1>
+    </div>
+    <div class="beechpart_ser">
+        <div class="text">
+            <div class="text1-inside">
+                <h2> Weddings</h2>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double
+                    click me and you can start adding your own content and make changes to the font.Feel free to drag
+                    and
+                    drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users
+                    know a little more about you.</p>
+            </div>
+        </div>
+        <div class="photu">
+            <img src="{{j.image6.url}}" alt="">
+
+        </div>
+    </div>
+    <div class="beechpart2_ser">
+        <div class="photu">
+            <img src="{{j.image7.url}}" alt="">
+        </div>
+        <div class="text">
+            <div class="text1-inside">
+                <h2>Corporate Events</h2>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double
+                    click me and you can start adding your own content and make changes to the font.Feel free to drag
+                    and
+                    drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users
+                    know a little more about you.</p>
+            </div>
+        </div>
+    </div>
+    <div class="beechpart3_ser">
+        <div class="text">
+            <div class="text1-inside">
+                <h2>Social Events</h2>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double
+                    click me and you can start adding your own content and make changes to the font.Feel free to drag
+                    and
+                    drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users
+                    know a little more about you.
+                </p>
+            </div>
+        </div>
+        <div class="photu">
+            <img src="{{j.image12.url}}" alt="">
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <h1>Follow Us</h1>
+            <div class="link">
+                <a href="">Facebook</a><br>
+                <a href="">Instagram</a> <br>
+                <a href="">Help</a><br>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="copyright">
+                <h4>
+                    © 2035 by Bonjour!
+                </h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

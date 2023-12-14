@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edb.css' %}">
+</head>
+
+<body>
+    <div class="line"></div>
+    <div class="container">
+        <div class="left-div">
+            <div class="center-black-div">
+                <h1 data-aos="flip-up">Bonjour!</h1>
+                <h3 data-aos="flip-up">Food Company</h3>
+            </div>
+        </div>
+        <div class="right-div">
+            {% if user.is_authenticated %}
+            <a href="/logout"><button>Log Out</button></a>
+            {% else %}
+            <a href="/login"><button>Log In</button></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div style="display: block;">
+        <div class="nav">
+            <a data-aos="flip-right" href="/">Home</a>
+            <a data-aos="flip-right" href="/aboutpage">About</a>
+            <a data-aos="flip-right" href="/servicepage">Services</a>
+            <a data-aos="flip-right" href="/samplepage">Sample Menu</a>
+            <a data-aos="flip-right" href="/orderonline">Order Online</a>
+            <a data-aos="flip-right" href="/reviewpage">Client Reviews</a>
+            <a data-aos="flip-right" href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="upperpart">
+        <h1>Sample Menu</h1>
+
+    </div>
+    <div class="black-div">
+        <div class="upperpart2">
+            <div class="m-auto">
+                <h2 class="h">Seasonal Flavors</h2>
+                <p>I'm a menu description. Click me and then “Edit Menu” to open the Restaurant Menu editor and change
+                    my text.
+                </p>
+            </div>
+        </div>
+        <div class="m-auto">
+            <h2 class="h">Appetizers</h2>
+            <div class="main-con"></div>
+            <p>I'm a description for a section of your menu. click me and then "Edit Menu" to open the Restaurant Menu
+                editor and change my text. </p>
+        </div>
+        <div class="m-auto main-div">
+            {% for i in x %}
+            <div class="m-auto">
+               
+                <h2 class="h">{{i.name}}</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            <div class="m-auto">
+                <h2 class="h">Aubergine Ricotta Rolls ...... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div> 
+            <div class="m-auto">
+                <h2 class="h">Artichokes in Olive Oil ...... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            {% endfor %}
+        </div>
+       
+        <div class="m-auto main-div">
+            {% for i in x %}
+            <div class="m-auto">
+                <h2 class="h">Salmon Canapes ...... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            
+            <div class="m-auto">
+                <h2 class="h">Crab Cakes ...... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            <div class="m-auto">
+                <h2 class="h">Smoked Brisket ...... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="m-auto">
+            <h2 class="h">Main</h2>
+            <div class="main-con"></div>
+            <p>I'm a description for a section of your menu. click me and then "Edit Menu" to open the Restaurant Menu
+                editor and change my text. </p>
+                
+        </div>
+        <div class="m-auto main-div">
+            <div class="m-auto">
+                {% for i in x %}
+                <h2 class="h">Tomatoes and Mozzarella Salad... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            <div class="m-auto">
+                <h2 class="h">Root Vegerable Salad........... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            <div class="m-auto">
+                <h2 class="h">Rosemary Chicken.......... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+               <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="m-auto main-div">
+            {% for i in x %}
+            <div class="m-auto">
+                <h2 class="h">White Fish Fillet & Mussel Stew.............. US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+                <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            <div class="m-auto">
+                <h2 class="h">Salmon in Black Butter.... US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+               <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            <div class="m-auto">
+                <h2 class="h">Sirloin Steak & Grilled Asparagus............ US$6</h2>
+                <p>I'm a dish description.click "Edit Menu" to open the Restaurant Menu editor and change my text.</p>
+               <a href="submitbutton/{{i.id}}"><button>View Details</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="footer ">
+        <div class="footer1">
+            <h1>Follow Us</h1>
+            <div class="link">
+                <a href="">Facebook</a><br>
+                <a href="">Instagram</a> <br>
+                <a href="">Help</a><br>
+            </div>
+        </div>
+        <div class="footer2">
+
+            <div class="copyright">
+                <h4>
+                    © 2035 by Bonjour!
+                </h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

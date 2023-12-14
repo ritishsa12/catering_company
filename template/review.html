@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edb.css' %}">
+    <link rel="stylesheet" href="/static/edb.css">
+</head>
+
+<body>
+    <div class="line"></div>
+    <div class="container">
+        <div class="left-div">
+            <div class="center-black-div">
+                <h1 data-aos="flip-up">Bonjour!</h1>
+                <h3 data-aos="flip-up">Food Company</h3>
+            </div>
+        </div>
+        <div class="right-div">
+            {% if user.is_authenticated %}
+            <a href="/logout"><button>Log Out</button></a>
+            {% else %}
+            <a href="/login"><button>Log In</button></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div style="display: block;">
+        <div class="nav">
+            <a data-aos="flip-right" href="/">Home</a>
+            <a data-aos="flip-right" href="/aboutpage">About</a>
+            <a data-aos="flip-right" href="/servicepage">Services</a>
+            <a data-aos="flip-right" href="/samplepage">Sample Menu</a>
+            <a data-aos="flip-right" href="/orderonline">Order Online</a>
+            <a data-aos="flip-right" href="/reviewpage">Client Reviews</a>
+            <a data-aos="flip-right" href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="tagline">
+        <h1>What Our Clients
+            <br>Say About Us
+        </h1>
+    </div>
+    <div class="black-div ">
+        <div  class=" review-main">
+        <div class="first1">
+            <div class="fchild1">
+                <div class="width40">
+                    <img src="{{j.image8.url}}">
+                </div>
+            </div>
+            <div class="schild1">
+                <div class="width40">
+                    <h1>Festive Spring Wedding</h1>
+                    <h5>Royal Palm Gardens, April 2035</h5>
+                    <p>“I'm a testimonial. Click to edit me and add text that says something nice about you and your
+                        services. Let your customers review you and tell their friends how great you are. Testimonials
+                        provide a sense of what it's like to work with you, or what it's like to use your products and
+                        services. This can show people that you're credible and reliable, and can build trust with
+                        potential customers.”</p>
+                </div>
+            </div>
+            <div class="tchild1">
+                <div class="width40">
+                    <img src="{{j.image10.url}}">
+                </div>
+            </div>
+            <div class="fourth1">
+                <div class="width40">
+                    <h1>4th Annual Children's Hospital Benefit</h1>
+                    <h5>Windsor Manor, June 2035</h5>
+                    <p>“I'm a testimonial. Click to edit me and add text that says something nice about you and your
+                        services. Let your customers review you and tell their friends how great you are. Testimonials
+                        provide a sense of what it's like to work with you, or what it's like to use your products and
+                        services. This can show people that you're credible and reliable, and can build trust with
+                        potential
+                        customers.”</p>
+                </div>
+            </div>
+            <!-- -->
+        </div>
+
+        <div class="second2">
+            <div class="fchild2">
+                <div class="width40">
+                    <img src="{{j.image9.url}}" alt="">
+                </div>
+            </div> 
+            <div class="schild2">
+                <div class="width40">
+                    <h1>Golden Anniversary Party</h1>
+                    <h5>Private Home, October 2035</h5>
+                    <p>“I'm a testimonial. Click to edit me and add text that says something nice about you and your
+                        services. Let your customers review you and tell their friends how great you are. Testimonials
+                        provide a sense of what it's like to work with you, or what it's like to use your products and
+                        services. This can show people that you're credible and reliable, and can build trust with
+                        potential
+                        customers.”
+                    </p>
+                </div>
+            </div>
+            <div class="tchild2">
+                <div class="width40">
+                    <img src="{{j.image11.url}}" alt="">
+                </div>
+            </div>
+            <div class="fourth2">
+                <div class="width40">
+                    <h1>Spring Wonderland Wedding</h1>
+                    <h5>The Chateau, December 2035</h5>
+                    <p>“I'm a testimonial. Click to edit me and add text that says something nice about you and your
+                        services. Let your customers review you and tell their friends how great you are. Testimonials
+                        provide a sense of what it's like to work with you, or what it's like to use your products and
+                        services. This can show people that you're credible and reliable, and can build trust with
+                        potential
+                        customers.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% for i in x %}
+    <div class="width40">
+        <h5>{{i.name}}</h5>
+        <p>{{i.message|safe}}
+        </p>
+    </div>
+    {% endfor %}
+    {% if user.is_authenticated %}
+    <div class="add-review">
+      <h2 style="text-align: center;">Add Your Review</h2>
+    </div>
+    <form action="addedrev" method="post">
+        {% csrf_token %}
+        <label>Name</label><br>
+        <input type="text" name="name"><br><br>
+        <label>Write your review:</label><br>
+        <input type="text" name="review"><br>
+        <input type="submit">
+       </form>
+    {% endif %}
+
+    </div>
+    
+    <div class="footer">
+        <div class="footer1">
+            <h1>Follow Us</h1>
+            <div class="link">
+                <a href="">Facebook</a><br>
+                <a href="">Instagram</a> <br>
+                <a href="">Help</a><br>
+            </div>
+        </div>
+        <div class="footer2">
+
+            <div class="copyright">
+                <h4>
+                    © 2035 by Bonjour!</h4>
+            </div>
+        </div>
+    </div> 
+</body>
+
+</html>

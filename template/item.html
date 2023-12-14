@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edb.css' %}">
+</head>
+
+<body>
+
+    <section>
+
+        <div class="items" style="display: flex;">
+            <div class="item1">
+                <div style="padding: 0px 5px 5px 5px;"><img src="{{myproduct.image.url}}" alt="sdnkjdn"
+                        style="width: 100%;height: 230px;"></div>
+                <div style="padding: 5px;"><img src="{{myproduct.image1.url}}" alt="mnbrjbf"
+                        style="width: 100%;height: 230px;"></div>
+                <div style="padding: 5px;"><img src="{{myproduct.image2.url}}" alt="efbjhrbjehr"
+                        style="width: 100%;height: 230px;"></div>
+            </div>
+
+            <div style="height: 30%;width: 60%;" class="items2"><img style="height: 100%;min-height: 720px;"
+                    src="{{myproduct.image4.url}}" alt="">
+
+            </div>
+            <div style="background-color: rgb(227, 232, 222); height: 700px;width: 80%;padding: 10px;" class="col-md-6">
+                {{myproduct.description|safe}}
+                <button
+                    style="background-color: coral  ;float: right; margin-top: 100px; padding: 5px 8px; margin-left: 10px; border-radius: 10px; box-shadow: 5px 7px 8px black; ">AddToCart</button>
+                <button
+                    style="background-color: coral ;float: right; margin-top: 100px; padding: 5px 8px; margin-left:
+                    10px; border-radius: 10px; box-shadow: 5px 7px 8px black; ">OrderNow</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

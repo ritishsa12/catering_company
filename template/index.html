@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edb.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="line"></div>
+    <div class="container">
+        <div class="left-div">
+            <div class="center-black-div">
+                <h1 data-aos="flip-up">Bonjour!</h1>
+                <h3 data-aos="flip-up">Food Company</h3>
+            </div>
+        </div>
+        <div class="right-div">
+            {% if user.is_authenticated %}
+            <a href="/logout"><button>Log Out</button></a>
+            {% else %}
+            <a href="/login"><button>Log In</button></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div style="display: block;">
+        <div class="nav">
+            <a data-aos="flip-right" href="/">Home</a>
+            <a data-aos="flip-right" href="/aboutpage">About</a>
+            <a data-aos="flip-right" href="/servicepage">Services</a>
+            <a data-aos="flip-right" href="/samplepage">Sample Menu</a>
+            <a data-aos="flip-right" href="/orderonline">Order Online</a>
+            <a data-aos="flip-right" href="/reviewpage">Client Reviews</a>
+            <a data-aos="flip-right" href="/contact">Contact</a>
+        </div>
+    </div>
+    <div class="bigheading " data-aos="flip-right">
+        <h1>
+            Redefining Food & Event Production
+        </h1>
+    </div>
+    <div class="image-container" data-aos="flip-left">
+
+        <img src="{{j.image.url}}" alt="Responsive Image">
+
+    </div>
+
+    <div class="div1">
+        <h1 data-aos="fade-in">What Makes Us Different</h1>
+    </div>
+
+    <div class="headings ">
+        <div class="div2" data-aos="fade-in">
+            <div class="width40">
+                <h1>Personal Touch</h1>
+                <h3>
+                    We will work with you to create a menu that fits your taste, budget and style.
+                 </h3>
+            </div>
+            
+        </div>
+        <div class="div3" data-aos="fade-in">
+           <div class="width40">
+            <h1>Devoted Team </h1>
+            <h3>Our team of professionals includes chefs, servers and bartenders committed to making your event
+                spectacular.
+            </h3>
+           </div>
+        </div>
+        <div class="div4" data-aos="fade-in">
+          <div class="width40">
+            <h1>Unmatched Quality</h1>
+            <h3>
+                Locally sourced produce and the freshest ingredients means food that is exceptional in taste.
+            </h3>
+          </div>
+        </div>
+    </div>
+    <!-- ......... email .............. -->
+    <div class="lastdiv ">
+        <div class="form1" data-aos="fade-in">
+            <h1>Subscribe to Our <br> Newsletter for Updates <br> and Special Offers</h1>
+            <form action="/submitdata" method="post">
+                {% csrf_token %}
+                <label style="font-size: 20px;">Email Address *</label><br><br>
+                <input type="email" name="email" id="email" style="height: 40px;" required>
+                <input type="submit" id="button">
+            </form>
+        </div>
+
+
+        <div class="glasspic" data-aos="fade-in">
+            <div class="width40">
+                <img src="{{j.image1.url}}" alt="here is my glass">
+            </div>
+        </div>
+    </div>
+    <div class="footer" data-aos="fade-in">
+        <div class="footer1">
+            <h1>Follow Us</h1>
+            <div class="link">
+                <a href="">Facebook</a><br>
+                <a href="">Instagram</a> <br>
+                <a href="">Help</a><br>
+            </div>
+        </div>
+        <div class="footer2 ">
+
+            <div class="copyright">
+                <h4>
+                    © 2035 by Bonjour!
+                </h4>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 0,
+            duration: 2000,
+
+        });
+    </script>
+</body>
+
+</html>

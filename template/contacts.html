@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+    <link rel="stylesheet" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edb.css' %}">
+</head>
+
+<body>
+    <div class="line"></div>
+    <div class="container">
+        <div class="left-div">
+            <div class="center-black-div">
+                <h1 data-aos="flip-up">Bonjour!</h1>
+                <h3 data-aos="flip-up">Food Company</h3>
+            </div>
+        </div>
+        <div class="right-div">
+            {% if user.is_authenticated %}
+            <a href="/logout"><button>Log Out</button></a>
+            {% else %}
+            <a href="/login"><button>Log In</button></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div style="display: block;">
+        <div class="nav">
+            <a data-aos="flip-right" href="/">Home</a>
+            <a data-aos="flip-right" href="/aboutpage">About</a>
+            <a data-aos="flip-right" href="/servicepage">Services</a>
+            <a data-aos="flip-right" href="/samplepage">Sample Menu</a>
+            <a data-aos="flip-right" href="/orderonline">Order Online</a>
+            <a data-aos="flip-right" href="/reviewpage">Client Reviews</a>
+            <a data-aos="flip-right" href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="tagline">
+        <h1>contacts</h1>
+    </div>
+    <hr>
+    <div class="black-div ">
+        <div class="review-main">
+
+            <div class="width50">
+                <div class="width40 fchild1">
+
+                    <h1>We can't wait to <br>
+                        hear from you
+                    </h1>
+                    <div id="inter-div1">
+                        <div>
+
+                            500 Terry Francine St. <br>
+                            San Francisco, <br>
+                            CA 94158 <br>
+
+
+                        </div>
+                        <div>info@mysite.com <br>
+                            Tel: 123-456-7890</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="width50 fchild2 fourth1">
+                <div class="width40 second2">
+                    <img src="{{j.image13.url}}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class=" review-main">
+            <div class="width50">
+                <div class="width40">
+                    <div class="inner">
+                        <h1>
+                            Request a Quote, We’ll Get Back to You Shortly</h1>
+                        <img src="{{j.image14.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="width50">
+                <div class="width40">
+
+                    <form action="">
+                        <div class="divu ">
+                            <div class="labeel1">
+                                <label for="">First Name</label><br><br>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="labeel1">
+                                <label for="">Last Name</label><br><br>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                        <div class="emaildiv">
+                            <label for="">Email*</label><br><br>
+                            <input type="email" name="" id="" required>
+                        </div>
+                        <div class="divu">
+                            <div class="labeel1">
+                                <label for="">Review*</label><br><br>
+                                <input type="text" name="" id="" required>
+                            </div>
+                            <div class="labeel1 date">
+                                <label  for="">Date</label><br><br>
+                                <input type="date" name="" id="">
+                            </div>
+                        </div>
+                        <div class="emaildiv">
+                            <label for="">Write a Message</label><br><br>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="button">
+                            <input type="Submit" name="" id="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer1">
+            <h1>Follow Us</h1>
+            <a href="">Facebook</a><br>
+            <a href="">Instagram</a> <br>
+            <a href="">Help</a><br>
+
+        </div>
+        <div class="footer2">
+
+            <div class="copyright">
+                <h4>
+                    © 2035 by Bonjour!</h4>
+            </div>
+        </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+
+</head >
+<body>
+    <div id="form">
+        <h1>Welcome to Login Page</h1>
+        <div class="formpage">
+            <form action="/login" method="post">
+                {% csrf_token %}
+                <label for="username">Username:</label><br>
+                <input type="text" name="username" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" required><br>
+                <input type="submit" id="submit">  
+                <a href="{% url 'reset_password' %}">Forgot Password?</a>
+                <h4>If You Are A New User: <a href="/signup">Sign Up</a></h4>
+            </form>
+        </div>
+    </div>
+ 
+</body>
+</head> 
+
+
